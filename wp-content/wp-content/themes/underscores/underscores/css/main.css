@@ -1,0 +1,393 @@
+/* ---------------Variable property ---------------- */
+
+:root {
+  --primary: #112229;
+  --secondary:#291519;
+  --tertiary: #5F7549;
+  --font-color: #ffe1c5;
+}
+
+
+/* ------------ Broad-scale stylingp--------------- */
+
+body {
+  /* Uuuuuuh yeah okay, 8 classes on the body? I'm using the !important */
+  margin: 0 !important;
+
+  height: 100vh;
+  font-size: 1rem;
+  color: var(--font-color);
+  background-color: var(--primary);
+}
+
+#page.site {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100vh;
+}
+
+/* ---------------- Remove site branding ----------------  */
+
+.site-branding > .site-title {
+  display: none;
+}
+
+.header-home {
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+
+  object-fit: cover;
+}
+
+.header-home > img {
+  object-fit: contain;
+  width: 100%;
+}
+
+
+/*------------------ Center page title -------------------*/
+.entry-title {
+  text-align: center;
+}
+
+/* -----------------NAV--------------------------- */
+.current_page_item {
+  border-left: 5px solid var(--font-color);
+  border-right: 5px solid var(--font-color);
+  border-radius: 15px;
+}
+
+#site-navigation {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#site-navigation > ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#site-navigation > ul > li > a {
+  color: var(--font-color);
+  
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+a:visited {
+  color: var(--font-color);
+}
+
+.menu-global-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.menu-global-container > #primary-menu {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.menu-global-container > #primary-menu > li > a {
+  padding: 15px;
+  min-width: 10ch;
+
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* -------------Header Image----------------- */
+
+#primary > #main > #post-6 > .post-thumbail {
+  width: 100%;
+  margin:0;
+}
+
+
+
+/* ----------------Post content areas------------------ */
+.entry-content {
+  display: flex;
+  justify-content: center;
+
+  padding: 5vmin 0 0 0;
+
+  background-color: var(--secondary);
+}
+
+.entry-content > ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+
+  padding: 0;
+  margin: 0;
+}
+
+/* List items within the entry-content area */
+.entry-content > ul > li {
+  padding: 20px;
+  
+  min-width: 30ch;
+  max-width: 40ch;
+
+  text-align: center;
+
+  background-color: var(--tertiary);
+} 
+
+/* Trying to override the super obnoxious specific wordpress classes withing the entry-content area. */
+.wp-block-latest-posts.is-grid li,
+.wp-block-latest-posts.wp-block-latest-posts__list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 300px;
+  margin: 20px 20px;
+  border-radius: 10px;
+
+  box-shadow: 4px 4px 5px 2px rgb(0,0,0,.3);
+}
+
+/* -----------Card Title Link---------------- */
+.wp-block-latest-posts.is-grid > li > a,
+.wp-block-latest-posts.wp-block-latest-posts__list > li > a {
+  margin-bottom: 20px;
+  border-bottom: solid 2px var(--font-color); 
+
+  font-size: 1.5rem;
+}
+
+ 
+.wp-block-latest-posts.is-grid > li > div,
+.wp-block-latest-posts.wp-block-latest-posts__list > li > div {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.wp-block-latest-posts.is-grid > li > div > a,
+.wp-block-latest-posts.wp-block-latest-posts__list > li > div > a {
+  margin-top: 20px;
+}
+
+.wp-block-latest-posts__post-excerpt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+/* --------------Read More Button--------------- */
+.wp-block-latest-posts__post-excerpt > a {
+  width: 125px;
+  padding: 10px;
+  background-color: var(--primary);
+  /* border: 3px solid var(--secondary); */
+  border-radius: 15px;
+}
+
+
+/* ----------------------------For Lawyers, adapt above code -------------- */
+
+
+
+/* ---------------Footer---------------- */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+
+  margin-top: auto;
+  height: 10vh;
+
+  background-color: var(--secondary);
+}
+
+
+
+
+/* ----------------Single Posts ------------------------------- */
+.entry-content > .practice-wrap,
+.entry-content > .lawyer-wrap {
+  padding: 0 10vmin;
+  background-color: var(--primary);
+}
+
+.post-thumbnail {
+  margin: auto;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+/* ----------------Contact Page---------------------- */
+
+
+
+
+
+/* Image by <a href="https://pixabay.com/users/RyanMcGuire-123690/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=673697">Ryan McGuire</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=673697">Pixabay</a> */
+
+/* Image by <a href="https://pixabay.com/users/Daniela_oliiver-637925/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=868522">Daniela Carvalho Dani</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=868522">Pixabay</a> */
+
+/* Image by <a href="https://pixabay.com/users/sharegirls-8529332/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3282604">sharegirls</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3282604">Pixabay</a> */
+
+/* Photo by Roland Samuel on Unsplash */
+
+
+
+/* 
+<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@rosam2020?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Roland Samuel"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Roland Samuel</span></a>
+
+*/
+/* Header statues books 
+Photo by Giammarco Boscaro on Unsplash
+
+
+
+
+<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@giamboscaro?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Giammarco Boscaro"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Giammarco Boscaro</span></a>
+*/
+
+
+/* 
+
+Farrah's approach to Family Law files is to be as kind as you can for as long as you can and try to negotiate a settlement which takes into account the needs and desires of all involved. When negotiation does not appear to be working and a fair settlement is not on the table then prepare and litigate quickly and effectively. She sees an incredible amount of value in having client�s work together, with lawyer assistance if needed, to settle their own issues, but feels it is very important to have litigation as an available resource as sometimes that is the only route available to obtaining what your client really needs.
+Farrah has practiced exclusively in the areas of Family law since her call to the bar in 2008. She is very passionate about obtaining the best possible results for her client and their family and has a substantial amount of experience dealing with all issues associated with common law separations and divorces. She also is an advocate for cohabitation and prenuptial agreements and is regularly negotiating and completing these contracts for her clients.
+Farrah is a trained mediator and is available for these services. She does not complete adoptions or take on mobility files.
+
+*/
+
+/* 
+Kim practices primarily in the area of labour and employment law representing both employees and employers. As a labour & employment lawyer, Kim�s practice includes working with employers and employees in wrongful termination matters and human rights disputes. She drafts and reviews severance packages and employment agreements, conducts and advises on workplace investigations (including OHS post incident investigations), and assists employers to develop workplace policies to comply with occupational health and safety, employment standards, privacy and human rights legislation. Kim helps clients know the difference between minimum standards and what is really required under the common law with respect to employment law.
+When acting for a terminated employee, Kim offers a flat rate fee for the severance review and if deemed necessary, after the review is complete, will further act on behalf of the employee on a contingency basis for negotiations on the severance package. This means that the client will only pay the upfront flat fee plus the contingency fee on any increase negotiated on the severance package they ultimately receive. This limits a person�s risk at a time when finances may be of greater concern.
+Additionally, Kim can assist in any real estate purchase, sale or refinance transactions and is also a licensed mortgage broker. In her spare time, Kim is also a wife and mom to two great kids!
+
+*/
+
+
+/* 
+
+Darren B. Becker, Q.C., a partner in CG Law, is a senior member of our Corporate Commercial Securities Practice Group. He has acted as counsel on a wide variety of corporate and commercial transactions including numerous corporate reorganizations, mergers, wind-ups and dissolutions.
+
+Darren is active in commercial financing, project developments, joint ventures, limited partnerships, acquisitions and divestitures of business interests of various types and commercial, residential, real estate transactions. He has facilitated and coordinated large and complex commercial transactions involving teams of corporate and commercial lawyers.
+
+Education:
+
+Bachelor of Laws, University of Alberta
+Bachelor of Arts, University of Alberta
+Awards and Recognition:
+
+Corporate Law and Real Estate Law, Best Lawyers� in Canada, 2017
+Queen's Counsel, 1998
+BV Distinguished peer review rating, Martindale-Hubbell
+Publications and Presentations:
+
+Lectured for the Alberta Bar Admission Course in real estate transactions
+
+Representative Experience:
+Has acted as counsel on a wide variety of corporate and commercial transactions including corporate reorganizations, mergers, wind-ups and dissolutions
+Has facilitated and coordinated large, complex commercial transactions involving teams of corporate and commercial lawyers
+
+*/
+
+
+
+/* 
+
+LITIGATION
+
+We understand that many business issues impact the way litigation must be conducted and we adapt the legal strategy to match your goals. We recognize that many clients wish to avoid trial and our team of experienced litigators will work with you, using alternative dispute resolution methods and other appropriate innovative measures, to develop a strategy that best meets your business objectives and will result in practical solutions to complicated problems.
+
+It is not always possible to conclude litigious matters amicably. We have extensive experience pursuing matters through trial and have established a reputation for aggressively and thoroughly pursuing our clients' interests at every level of Canada's judicial system � when necessary, all the way to the Supreme Court of Canada.
+
+Our extensive use of paralegals, litigation support, e-discovery and document imaging technology enables us to provide cost-effective service to our clients on disputes of all sizes.
+
+Our lawyers have extensive experience prosecuting and defending litigation in all areas, including:
+- Builders� liens
+- Contracts
+- Constitutional law
+- Construction
+- Employment law
+- Environmental matters
+- Fire and property losses
+- Joint operating disputes
+- Occupiers' liability
+- Oil and gas law
+- Personal injuries
+- Professional negligence
+- Regulatory proceedings and appeals
+
+
+
+INSURANCE
+
+
+The lawyers in our Insurance & Risk Management Practice Group are an experienced team of lawyers who represent major Canadian and international insurers, brokers, syndicates, adjusters, corporations, individuals and self-insuring organizations.
+
+Over the years, our firm has developed a top-notch team of lawyers and skilled litigation support staff who truly understand the legal and business needs of our clients, both institutional insurers and self-insured corporations. They have a well-earned reputation for aggressively and thoroughly pursuing your interests at every level of the Canadian judicial system and through a variety of alternative dispute resolution approaches.
+
+We recognize you may see trial as an absolute last resort and where possible we use innovative, alternative dispute resolution methods such as judicial dispute resolution, private mediation and pre-trial settlement conferences to reach a timely and cost-effective solution.
+
+In addition, we have vast experience in assisting with the development and operation of programs for self-insured organizations.
+
+We have a solid appreciation of the expectations and requirements of insurers, in relation to standardized, timely reporting and accurate assessment of exposure. We focus on helping you solve your legal problems quickly and economically, while always ensuring a high level of client service. 
+
+We offer services in:
+- Auto Liability
+- Aviation
+- Bad Faith Litigation
+- Business Interruption
+- Casualty
+- Comprehensive Liability
+- Construction
+- Directors� and Officers� Liability
+- Disability
+- Employment Liability
+- Environmental Liability
+- Errors & Omissions
+- Fidelity and Surety
+- Home Owners� Insurance
+- Licensing
+- Life, Accident and Sickness Insurance
+- Malpractice
+- Oil and Gas
+- Products Liability
+- Professional Liability and Malpractice
+- Property Losses
+- Reinsurance
+
+
+
+CONSTRUCTION
+
+
+Practical advice, from planning to completion.
+
+Our clients include owners, developers, contractors and subcontractors. Whether it�s a residential, commercial or industrial project, our team is dedicated to helping you keep it on budget and on schedule. Our approach is to limit or avoid disputes by focusing on contract negotiations and dispute resolution mechanisms, and by advising on rights and obligations throughout the construction process. Where disputes are unavoidable, we help you achieve the best possible outcome through mediation and litigation.
+
+Builders' liens
+Delay and extra work issues
+Construction defects and faulty products
+Changes in scope of work
+Performance Bonds
+Real estate and development contracts
+Negligence and performance issues
+
+
+
+*/
